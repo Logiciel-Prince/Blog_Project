@@ -13,7 +13,7 @@
     <nav>
         <div class="menu">
             <div class="logo">
-                <a href="#">CodingLab</a>
+                <a href="#">BlogLab</a>
             </div>
             <ul>
                 <li><a href="home">Home</a></li>
