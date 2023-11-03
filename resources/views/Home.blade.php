@@ -19,12 +19,14 @@
                     <li><a href="home">Home</a></li>
                     <li><a href="displayBlogRecords">Blog</a></li>
                     <li><a href="displayCategory">Category</a></li>
+                    @if (empty(Auth::user()->id))
                     <li><a href="login">Login</a></li>
                     <li><a href="register">Register</a></li>
+                @endif
                 </ul>
                 @if (!empty(Auth::user()->id))
-                    <a href="login">
-                        <li style="color: white">Logged In:{{ Auth::user()->name }}</li>
+                    <a href="dashboard">
+                        <li style="color: white">{{ Auth::user()->name }}</li>
                     </a>
                 @endif
             </div>

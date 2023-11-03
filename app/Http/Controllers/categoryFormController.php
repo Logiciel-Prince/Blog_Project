@@ -31,10 +31,10 @@ class categoryFormController extends Controller
                 $crud->image=$filename;
                 $crud->title=$data['title'];
                 $crud->save();
-                return redirect()->back()->withSuccess('category saved!');
+                return redirect('displayCategory')->withSuccess('category saved!');
             }
             catch(Exception $e){
-                return redirect('form')->with('failed',"operation failed");
+                return redirect()->back()->with('failed',"operation failed");
             }
            }
     }

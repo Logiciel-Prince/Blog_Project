@@ -37,9 +37,9 @@ class blogFormController extends Controller
                 $crud->categories = json_encode($data['categories']);
                 $crud->description = $data['description'];
                 $crud->save();
-                return redirect()->back()->withSuccess('Blog saved!');
+                return redirect('displayBlogRecords')->withSuccess('Blog saved!');
             } catch (Exception $e) {
-                return redirect('form')->with('failed', "operation failed");
+                return redirect()->back()->with('failed', "operation failed");
             }
         }
     }
