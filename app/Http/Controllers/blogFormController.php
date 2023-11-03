@@ -22,7 +22,6 @@ class blogFormController extends Controller
         ];
         $validator = Validator::make($request->all(), $rules, $message);
         if ($validator->fails()) {
-            dd($validator);
             return redirect('form')->withInput()->withErrors($validator->message);
         } else {
             $data = $request->input();
